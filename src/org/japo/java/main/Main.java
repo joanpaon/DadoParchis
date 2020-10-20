@@ -23,6 +23,9 @@ import java.util.Random;
  */
 public class Main {
 
+    // Sistema Aleatorio
+    public static final Random RND = new Random();
+
     /**
      * @param args the command line arguments
      */
@@ -30,17 +33,14 @@ public class Main {
         // Constantes
         final int DADO_MIN = 1;
         final int DADO_MAX = 6;
-        
-        // Objeto Random
-        Random rnd = new Random();
 
         // Variable
         int dado;
-        
+
         // Tirada
-        dado = rnd.nextInt(DADO_MAX - DADO_MIN + 1) + DADO_MIN;
-        
+        dado = RND.nextInt(DADO_MAX - DADO_MIN + 1) + DADO_MIN;
+
         // Mensaje
-        System.out.printf("Tirada dado .......: %d\n", dado);
+        System.out.printf("Tirada dado .......: %d%n", dado);
     }
 }
